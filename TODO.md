@@ -1,7 +1,3 @@
-# Localisation:
-- Item names
-- Settings (name,  values, descriptions)
-
 # Migrations:
 - Military 1: Firearm magazine
 - Military 1: Wood shotgun shells

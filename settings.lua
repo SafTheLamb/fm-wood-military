@@ -8,7 +8,8 @@ data:extend(
     name = "wood-military-smg-ammo",
     setting_type = "startup",
     default_value = "item",
-    allowed_values = {"item", "recipe", "no"}
+    allowed_values = {"item", "recipe", "no"},
+    order = "a[ammo]-a[smg]"
   },
   -- add wood shotgun shell for vanilla shotguns
   {
@@ -16,21 +17,25 @@ data:extend(
     name = "wood-military-shotgun-ammo",
     setting_type = "startup",
     default_value = "item",
-    allowed_values = {"item", "recipe", "no"}
+    allowed_values = {"item", "recipe", "no"},
+    order = "a[ammo]-b[shotgun]"
   },
   -- how much wood each ammo item costs
   {
     type = "int-setting",
     name = "wood-military-ammo-cost",
     setting_type = "startup",
-    default_value = 4
+    minimum_value = 1,
+    default_value = 4,
+    order = "b[ammo-details]-a[cost]"
   },
   -- increase damage of non-wood ammo for increased catharsis
   {
     type = "bool-setting",
     name = "wood-military-damage-buff",
     setting_type = "startup",
-    default_value = true
+    default_value = true,
+    order = "b[ammo-details]-b[buff]"
   }
 })
 
@@ -43,7 +48,8 @@ if modutil.sniper_rifle then
       name = "wood-military-sniper-ammo",
       setting_type = "startup",
       default_value = "item",
-      allowed_values = {"item", "recipe", "no"}
+      allowed_values = {"item", "recipe", "no"},
+      order = "a[ammo]-c[sniper]"
     }
   })
 end

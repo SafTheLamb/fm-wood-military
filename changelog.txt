@@ -2,4 +2,8 @@
 Version: 1.0.0
 Date: 12.13.2023
   Features:
-    - Wood Bolts Magazine
+    - Wood ammo for vanilla pistol/smg
+    - Wood ammo for vanilla shotgun
+    - Wood ammo for sniper rifle from https://mods.factorio.com/mod/sniper-rifle-improved
+    - Setting to buff vanilla ammo
+    - Setting to control wood ammo cost
