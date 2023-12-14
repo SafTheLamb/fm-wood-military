@@ -1,6 +1,8 @@
+local active_mods = mods or script.active_mods
+
 local modutil =
 {
-  sniper_rifle = mods["sniper-rifle-improved"],
+  sniper_rifle = active_mods["sniper-rifle-improved"],
 }
 
 return modutil
