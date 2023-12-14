@@ -35,10 +35,10 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
       type = "recipe",
       name = "wood-bolts-magazine",
       enabled = false,
-      energy_required = 2,
+      energy_required = 1,
       ingredients = {{"wood", 2*wood_cost}, {"iron-stick", 1}},
       result = "wood-bolts-magazine",
-      result_count = 2
+      result_count = 1
     }
   })
 end

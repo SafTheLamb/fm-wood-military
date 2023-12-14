@@ -23,7 +23,7 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
   Recipe("carbine-rifle"):add_unlock("military")
   Recipe("wood-bolts-magazine"):add_unlock("military")
   Recipe("carbine-rifle"):remove_unlock("military-2")
-  Recipe("rifle-magazine"):add_ingredient({"wood-bolts-magazine", 1})
+  Recipe("sniper-magazine-1"):add_ingredient({"wood-bolts-magazine", 1})
 elseif modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value == "recipe" then
   Recipe("rifle-magazine"):add_ingredient({"wood", 2*wood_cost})
 end
