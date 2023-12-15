@@ -11,7 +11,7 @@ if settings.startup["wood-military-smg-ammo"].value == "item" then
       {
         category = "bullet",
         range_modifier = 0.8,
-        cooldown_modifier = 1/0.9,
+        cooldown_modifier = 1/0.8,
         action =
         {
           type = "direct",
@@ -54,7 +54,7 @@ if settings.startup["wood-military-shotgun-ammo"].value == "item" then
       {
         category = "shotgun-shell",
         range_modifier = 0.8,
-        cooldown_modifier = 1/0.9,
+        cooldown_modifier = 1/0.8,
         target_type = "direction",
         clamp_position = true,
         action =
@@ -93,7 +93,7 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
       {
         category = "rifle-bullet",
         range_modifier = 0.8,
-        cooldown_modifier = 1/0.9,
+        cooldown_modifier = 1/0.8,
         action =
         {
           type = "direct",
@@ -117,7 +117,7 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
         }
       },
       magazine_size = 5,
-      reload_time = 45,
+      reload_time = 75,
       subgroup = "ammo",
       order = "a[basic-clips]-d[sniper-magazine-0]",
       stack_size = 200
