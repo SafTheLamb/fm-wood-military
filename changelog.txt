@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 1.11.2023
+  Features:
+    - Wood armor
+    - Optional Hard mode that makes recipes harder
+  Hard mode:
+    - Add Copper plates to Wood ammo recipes
+    - Add Steel plates to Firearm magazine, Shotgun shell recipes
+    - Replace Iron with Steel in Submachine gun, Shotgun, and Light armor recipes
+    - Add Plastic bars to Piercing rounds magazine, Piercing shotgun shell, and Heavy armor recipes
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 12.13.2023
   Features:

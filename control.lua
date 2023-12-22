@@ -16,11 +16,11 @@ local function on_configuration_changed()
   if modutil.sniper_rifle then
     for _,force in pairs(game.forces) do
       -- run sniper rifle migrations here instead, since migrations don't rerun when other mods are installed
-      local technologies = force.technologies
+      local technology = force.technology
       local recipes = force.recipes
 
-      local military1 = technologies["military"].researched
-      local military2 = technologies["military-2"].researched
+      local military1 = technology["military"].researched
+      local military2 = technology["military-2"].researched
 
       if settings.startup["wood-military-sniper-ammo"].value == "item" then
         recipes["wood-bolts-magazine"].enabled = military1

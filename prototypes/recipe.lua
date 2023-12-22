@@ -2,6 +2,7 @@ local modutil = require("modutil")
 
 local wood_cost = settings.startup["wood-military-ammo-cost"].value
 
+-- Pistol/smg ammo ---------------------------------------------------------------------------------
 if settings.startup["wood-military-smg-ammo"].value == "item" then
   data:extend({
     {
@@ -15,6 +16,7 @@ if settings.startup["wood-military-smg-ammo"].value == "item" then
   })
 end
 
+-- Shotgun ammo ------------------------------------------------------------------------------------
 if settings.startup["wood-military-shotgun-ammo"].value == "item" then
   data:extend({
     {
@@ -29,6 +31,7 @@ if settings.startup["wood-military-shotgun-ammo"].value == "item" then
   })
 end
 
+-- Sniper rifle ammo -------------------------------------------------------------------------------
 if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value == "item" then
   data:extend({
     {
@@ -38,6 +41,20 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
       energy_required = 1,
       ingredients = {{"wood", 2*wood_cost}, {"iron-stick", 1}},
       result = "wood-bolts-magazine",
+      result_count = 1
+    }
+  })
+end
+
+-- Armor -----------------------------------------------------------------------------------------
+if settings.startup["wood-military-armor"].value == "item" then
+  data:extend({
+    {
+      type = "recipe",
+      name = "wood-armor",
+      energy_required = 3,
+      ingredients = {{"wood", 20}},
+      result = "wood-armor",
       result_count = 1
     }
   })

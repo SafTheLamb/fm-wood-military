@@ -1,5 +1,6 @@
 local modutil = require("modutil")
 
+-- Pistol/smg ammo ---------------------------------------------------------------------------------
 if settings.startup["wood-military-smg-ammo"].value == "item" then
   data:extend({
     {
@@ -7,19 +8,15 @@ if settings.startup["wood-military-smg-ammo"].value == "item" then
       name = "wood-darts-magazine",
       icon = "__wood-military__/graphics/icons/wood-darts-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
-      ammo_type =
-      {
+      ammo_type = {
         category = "bullet",
         range_modifier = 0.8,
         cooldown_modifier = 1/0.8,
-        action =
-        {
+        action = {
           type = "direct",
-          action_delivery =
-          {
+          action_delivery = {
             type = "instant",
-            target_effects =
-            {
+            target_effects = {
               {
                 type = "create-entity",
                 entity_name = "explosion-hit-splinters",
@@ -43,6 +40,7 @@ if settings.startup["wood-military-smg-ammo"].value == "item" then
   })
 end
 
+-- Shotgun ammo ------------------------------------------------------------------------------------
 if settings.startup["wood-military-shotgun-ammo"].value == "item" then
   data:extend({
     {
@@ -50,19 +48,16 @@ if settings.startup["wood-military-shotgun-ammo"].value == "item" then
       name = "wood-shotgun-shell",
       icon = "__wood-military__/graphics/icons/wood-shotgun-shell.png",
       icon_size = 64, icon_mipmaps = 4,
-      ammo_type =
-      {
+      ammo_type = {
         category = "shotgun-shell",
         range_modifier = 0.8,
         cooldown_modifier = 1/0.8,
         target_type = "direction",
         clamp_position = true,
-        action =
-        {
+        action = {
           type = "direct",
           repeat_count = 8,
-          action_delivery =
-          {
+          action_delivery = {
             type = "projectile",
             projectile = "wood-shotgun-pellet",
             starting_speed = 1,
@@ -82,6 +77,7 @@ if settings.startup["wood-military-shotgun-ammo"].value == "item" then
   })
 end
 
+-- Sniper rifle ammo -------------------------------------------------------------------------------
 if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value == "item" then
   data:extend({
     {
@@ -89,19 +85,15 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
       name = "wood-bolts-magazine",
       icon = "__wood-military__/graphics/icons/wood-bolts-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
-      ammo_type =
-      {
+      ammo_type = {
         category = "rifle-bullet",
         range_modifier = 0.8,
         cooldown_modifier = 1/0.8,
-        action =
-        {
+        action = {
           type = "direct",
-          action_delivery =
-          {
+          action_delivery = {
             type = "instant",
-            target_effects =
-            {
+            target_effects = {
               {
                 type = "create-entity",
                 entity_name = "explosion-hit-splinters",
@@ -121,6 +113,45 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
       subgroup = "ammo",
       order = "a[basic-clips]-d[sniper-magazine-0]",
       stack_size = 200
+    }
+  })
+end
+
+-- Armor -----------------------------------------------------------------------------------------
+if settings.startup["wood-military-armor"].value == "item" then
+  data:extend({
+    {
+      type = "armor",
+      name = "wood-armor",
+      icon = "__wood-military__/graphics/icons/wood-armor.png",
+      icon_size = 64, icon_mipmaps = 4,
+      resistances =
+      {
+        {
+          type = "physical",
+          decrease = 2,
+          percent = 10
+        },
+        {
+          type = "acid",
+          decrease = 0,
+          percent = 10
+        },
+        {
+          type = "explosion",
+          decrease = 1,
+          percent = 10
+        },
+        {
+          type = "fire",
+          decrease = 0,
+          percent = -90
+        }
+      },
+      subgroup = "armor",
+      order = "A[wood-armor]",
+      stack_size = 1,
+      durability = 500
     }
   })
 end
