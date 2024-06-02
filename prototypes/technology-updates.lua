@@ -21,6 +21,11 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
   Recipe("carbine-rifle"):remove_unlock("military-2") --Technology("military-2"):remove_effect("carbine-rifle")
 end
 
+-- Artillery shell ---------------------------------------------------------------------------------
+if settings.startup["wood-military-artillery"].value then
+  Technology("artillery"):add_effect("wood-artillery-shell")
+end
+
 -- Armor -------------------------------------------------------------------------------------------
 if settings.startup["wood-military-armor"].value == "item" or settings.startup["wood-military-hard-mode"].value then
   Technology("military"):add_effect("light-armor")

@@ -4,6 +4,7 @@ Date: 1.11.2023
   Features:
     - Wood armor
     - Optional Hard mode that makes recipes harder
+    - Wood artillery shells
   Hard mode:
     - Add Copper plates to Wood ammo recipes
     - Add Steel plates to Firearm magazine, Shotgun shell recipes

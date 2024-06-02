@@ -19,6 +19,14 @@ data:extend({
     default_value = "item",
     order = "a[ammo]-b[shotgun]"
   },
+  -- add wood artillery shell for artillery cannons
+  {
+    type = "bool-setting",
+    name = "wood-military-artillery",
+    setting_type = "startup",
+    default_value = true,
+    order = "a[ammo]-d[artillery]"
+  },
   -- how much wood each ammo item costs
   {
     type = "int-setting",

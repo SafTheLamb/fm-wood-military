@@ -117,6 +117,39 @@ if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value 
   })
 end
 
+-- Artillery shell ---------------------------------------------------------------------------------
+if settings.startup["wood-military-artillery"].value then
+  data:extend({
+    {
+      type = "ammo",
+      name = "wood-artillery-shell",
+      icon = "__wood-military__/graphics/icons/wood-artillery-shell.png",
+      icon_size = 64, icon_mipmaps = 4,
+      ammo_type = {
+        category = "artillery-shell",
+        target_type = "position",
+        action = {
+          type = "direct",
+          action_delivery = {
+            type = "artillery",
+            projectile = "wood-artillery-projectile",
+            starting_speed = 1,
+            direction_deviation = 0,
+            range_deviation = 0,
+            source_effects = {
+              type = "create-explosion",
+              entity_name = "artillery-cannon-muzzle-flash"
+            }
+          }
+        }
+      },
+      subgroup = "ammo",
+      order = "d[explosive-cannon-shell]-d[-artillery]",
+      stack_size = 10
+    }
+  })
+end
+
 -- Armor -----------------------------------------------------------------------------------------
 if settings.startup["wood-military-armor"].value == "item" then
   data:extend({

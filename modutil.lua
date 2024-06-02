@@ -5,6 +5,8 @@ local modutil = {
   
   aai_industry = active_mods["aai-industry"],
   brass = active_mods["BrassTacks"],
+  growtorio = active_mods["growtorio"],
+  wood_logistics = active_mods["wood-logistics"],
 }
 
 return modutil
