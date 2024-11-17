@@ -1,15 +1,13 @@
-local modutil = require("modutil")
-
 -- Pistol/smg ammo ---------------------------------------------------------------------------------
-if settings.startup["wood-military-smg-ammo"].value == "item" then
+if settings.startup["wood-military-smg-ammo"].value then
   data:extend({
     {
       type = "ammo",
       name = "wood-darts-magazine",
       icon = "__wood-military__/graphics/icons/wood-darts-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
+      ammo_category = "bullet",
       ammo_type = {
-        category = "bullet",
         range_modifier = 0.8,
         cooldown_modifier = 1/0.8,
         action = {
@@ -41,15 +39,15 @@ if settings.startup["wood-military-smg-ammo"].value == "item" then
 end
 
 -- Shotgun ammo ------------------------------------------------------------------------------------
-if settings.startup["wood-military-shotgun-ammo"].value == "item" then
+if settings.startup["wood-military-shotgun-ammo"].value then
   data:extend({
     {
       type = "ammo",
       name = "wood-shotgun-shell",
       icon = "__wood-military__/graphics/icons/wood-shotgun-shell.png",
       icon_size = 64, icon_mipmaps = 4,
+      ammo_category = "shotgun-shell",
       ammo_type = {
-        category = "shotgun-shell",
         range_modifier = 0.8,
         cooldown_modifier = 1/0.8,
         target_type = "direction",
@@ -78,15 +76,15 @@ if settings.startup["wood-military-shotgun-ammo"].value == "item" then
 end
 
 -- Sniper rifle ammo -------------------------------------------------------------------------------
-if modutil.sniper_rifle and settings.startup["wood-military-sniper-ammo"].value == "item" then
+if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo"].value then
   data:extend({
     {
       type = "ammo",
       name = "wood-bolts-magazine",
       icon = "__wood-military__/graphics/icons/wood-bolts-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
+      ammo_category = "rifle-bullet",
       ammo_type = {
-        category = "rifle-bullet",
         range_modifier = 0.8,
         cooldown_modifier = 1/0.8,
         action = {
@@ -125,8 +123,8 @@ if settings.startup["wood-military-artillery"].value then
       name = "wood-artillery-shell",
       icon = "__wood-military__/graphics/icons/wood-artillery-shell.png",
       icon_size = 64, icon_mipmaps = 4,
+      ammo_category = "artillery-shell",
       ammo_type = {
-        category = "artillery-shell",
         target_type = "position",
         action = {
           type = "direct",
@@ -151,7 +149,7 @@ if settings.startup["wood-military-artillery"].value then
 end
 
 -- Armor -----------------------------------------------------------------------------------------
-if settings.startup["wood-military-armor"].value == "item" then
+if settings.startup["wood-military-armor"].value then
   data:extend({
     {
       type = "armor",

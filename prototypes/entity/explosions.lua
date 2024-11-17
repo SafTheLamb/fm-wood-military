@@ -5,7 +5,7 @@ data:extend({
     type = "explosion",
     name = "explosion-hit-splinters",
     localised_name = {"entity-name.explosion-hit"},
-    flags = {"not-on-map", "hidden"},
+    flags = {"not-on-map"},
     subgroup = "explosions",
     animations = util.empty_sprite(),
     smoke = "smoke-fast",
@@ -38,11 +38,11 @@ data:extend({
     localised_name = {"entity-name.wood-artillery-explosion"},
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
-    flags = {"not-on-map", "hidden"},
+    flags = {"not-on-map"},
     subgroup = "explosions",
     animations = util.empty_sprite(),
     --light = default_light(50),
-    sound = sounds.small_explosion(0.8),
+    sound = sounds.small_explosion,
     created_effect =
     {
       type = "direct",

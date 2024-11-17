@@ -1,15 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+  Features:
+    - Update mod to Factorio 2.0.7, using Kryzeth's stdlib fork for now (its data-stage functions are currently most up-to-date)
+  Changes:
+    - Simplified settings to mostly be boolean checkboxes
+
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 1.11.2023
   Features:
     - Wood armor
     - Optional Hard mode that makes recipes harder
     - Wood artillery shells
-  Hard mode:
-    - Add Copper plates to Wood ammo recipes
-    - Add Steel plates to Firearm magazine, Shotgun shell recipes
-    - Replace Iron with Steel in Submachine gun, Shotgun, and Light armor recipes
-    - Add Plastic bars to Piercing rounds magazine, Piercing shotgun shell, and Heavy armor recipes
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0

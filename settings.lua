@@ -1,22 +1,18 @@
-local modutil = require("modutil")
-
 data:extend({
   -- add wood darts magazine for vanilla pistol/smg
   {
-    type = "string-setting",
+    type = "bool-setting",
     name = "wood-military-smg-ammo",
     setting_type = "startup",
-    allowed_values = {"item", "recipe", "no"},
-    default_value = "item",
+    default_value = true,
     order = "a[ammo]-a[smg]"
   },
   -- add wood shotgun shell for vanilla shotguns
   {
-    type = "string-setting",
+    type = "bool-setting",
     name = "wood-military-shotgun-ammo",
     setting_type = "startup",
-    allowed_values = {"item", "recipe", "no"},
-    default_value = "item",
+    default_value = true,
     order = "a[ammo]-b[shotgun]"
   },
   -- add wood artillery shell for artillery cannons
@@ -54,24 +50,22 @@ data:extend({
   },
   -- add wood armor
   {
-    type = "string-setting",
+    type = "bool-setting",
     name = "wood-military-armor",
     setting_type = "startup",
-    allowed_values = {"item", "recipe", "no"},
-    default_value = "item",
+    default_value = true,
     order = "c[armor]"
   }
 })
 
-if modutil.sniper_rifle then
+if mods["sniper-rifle-improved"] then
   data:extend({
     -- add crossbow bolts magazine for snipers
     {
-      type = "string-setting",
+      type = "bool-setting",
       name = "wood-military-sniper-ammo",
       setting_type = "startup",
-      allowed_values = {"item", "recipe", "no"},
-      default_value = "item",
+      default_value = true,
       order = "a[ammo]-c[sniper]"
     }
   })

@@ -1,11 +1,9 @@
-local modutil = require("modutil")
-
 local function on_init()
   -- respawn with wood ammo instead
-  if settings.startup["wood-military-smg-ammo"] == "item" then
+  if settings.startup["wood-military-smg-ammo"].value then
     if remote.interfaces["freeplay"] then
       local respawn_items = remote.call("freeplay", "get_respawn_items")
-      respawn_items["wood-bolts-magazine"] = respawn_items["firearm-magazine"]
+      respawn_items["wood-darts-magazine"] = respawn_items["firearm-magazine"]
       respawn_items["firearm-magazine"] = nil
       remote.call("freeplay", "set_respawn_items", respawn_items)
     end
@@ -13,7 +11,7 @@ local function on_init()
 end
 
 local function on_configuration_changed()
-  if modutil.sniper_rifle then
+  if script.active_mods["sniper-rifle-improved"] then
     for _,force in pairs(game.forces) do
       -- run sniper rifle migrations here instead, since migrations don't rerun when other mods are installed
       local technology = force.technologies
@@ -22,7 +20,7 @@ local function on_configuration_changed()
       local military1 = technology["military"].researched
       local military2 = technology["military-2"].researched
 
-      if settings.startup["wood-military-sniper-ammo"].value == "item" then
+      if settings.startup["wood-military-sniper-ammo"].value then
         recipes["wood-bolts-magazine"].enabled = military1
         recipes["carbine-rifle"].enabled = military1
       else

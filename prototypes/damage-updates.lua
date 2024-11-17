@@ -25,11 +25,11 @@ local function increase_damage(ammo, amount)
 end
 
 if settings.startup["wood-military-damage-buff"].value then
-  if settings.startup["wood-military-smg-ammo"].value == "item" then
+  if settings.startup["wood-military-smg-ammo"].value then
     increase_damage(data.raw.ammo["firearm-magazine"].ammo_type, 1)
     increase_damage(data.raw.ammo["piercing-rounds-magazine"].ammo_type, 1)
   end
-  if settings.startup["wood-military-shotgun-ammo"].value == "item" then
+  if settings.startup["wood-military-shotgun-ammo"].value then
     increase_damage(data.raw.projectile["shotgun-pellet"], 1)
     increase_damage(data.raw.projectile["piercing-shotgun-pellet"], 1)
   end

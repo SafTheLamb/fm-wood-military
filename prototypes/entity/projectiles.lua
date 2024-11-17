@@ -1,5 +1,5 @@
 -- Shotgun pellet ----------------------------------------------------------------------------------
-if settings.startup["wood-military-shotgun-ammo"].value == "item" then
+if settings.startup["wood-military-shotgun-ammo"].value then
   data:extend({
     {
       type = "projectile",
@@ -51,7 +51,7 @@ if settings.startup["wood-military-artillery"].value then
         scale = 0.5
       },
       shadow = {
-        filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+        filename = "__base__/graphics/entity/artillery-projectile/shell-shadow.png",
         width = 64,
         height = 64,
         scale = 0.5
