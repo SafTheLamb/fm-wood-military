@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+  Features:
+    - Add gunshot effects
+    - Adds compatibility with Distant Misfires
+    - Replace kry_stdlib dependency with fdsl
+
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
   Features:
     - Update mod to Factorio 2.0.7, using Kryzeth's stdlib fork for now (its data-stage functions are currently most up-to-date)

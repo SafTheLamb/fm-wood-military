@@ -1,6 +1,41 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
+local small_woodshot = function()
+  return
+  {
+    {
+      filename = "__wood-military__/graphics/entity/explosion-woodshot/explosion-woodshot.png",
+      priority = "extra-high",
+      width = 51,
+      height = 57,
+      frame_count = 13,
+      animation_speed = 1.5,
+      shift = {0, 0},
+      scale = 0.5,
+      usage = "explosion"
+    }
+  }
+end
+
 data:extend({
+  {
+    type = "explosion",
+    name = "explosion-woodshot-small",
+    localised_name = {"entity-name.explosion-gunshot-small"},
+    icons =
+    {
+      {icon = "__base__/graphics/icons/explosion.png"},
+      {icon = "__base__/graphics/icons/pistol.png"}
+    },
+    flags = {"not-on-map"},
+    hidden = true,
+    subgroup = "explosions",
+    animations = small_woodshot(),
+    rotate = true,
+    smoke = "smoke-fast",
+    smoke_count = 1,
+    smoke_slow_down_factor = 1
+  },
   {
     type = "explosion",
     name = "explosion-hit-splinters",
