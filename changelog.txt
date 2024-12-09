@@ -1,5 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.1
+Version: 2.1.1
+  Features:
+    - Add a setting to only start the game with wood darts (you always respawn with darts)
+
+---------------------------------------------------------------------------------------------------
+Version: 2.1.0
   Features:
     - Add gunshot effects
     - Adds compatibility with Distant Misfires

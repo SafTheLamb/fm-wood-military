@@ -55,6 +55,14 @@ data:extend({
     setting_type = "startup",
     default_value = true,
     order = "c[armor]"
+  },
+  -- start the game with wood darts magazines
+  {
+    type = "bool-setting",
+    name = "wood-military-nerf-start",
+    setting_type = "runtime-global",
+    default_value = false,
+    order = "z[misc]-a[start]"
   }
 })
 

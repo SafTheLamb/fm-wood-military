@@ -6,6 +6,18 @@ local function on_init()
       respawn_items["wood-darts-magazine"] = respawn_items["firearm-magazine"]
       respawn_items["firearm-magazine"] = nil
       remote.call("freeplay", "set_respawn_items", respawn_items)
+
+      if settings.global["wood-military-nerf-start"].value then
+        local created_items = remote.call("freeplay", "get_created_items")
+        created_items["wood-darts-magazine"] = created_items["firearm-magazine"]
+        created_items["firearm-magazine"] = nil
+        remote.call("freeplay", "set_created_items", created_items)
+
+        local ship_items = remote.call("freeplay", "get_ship_items")
+        ship_items["wood-darts-magazine"] = ship_items["firearm-magazine"]
+        ship_items["firearm-magazine"] = nil
+        remote.call("freeplay", "set_ship_items", ship_items)
+      end
     end
   end
 end
