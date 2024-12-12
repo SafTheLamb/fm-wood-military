@@ -1,6 +1,7 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
 -------------------------------------------------------------------------- SMG
+
 if settings.startup["wood-military-smg-ammo"].value then
   data:extend({
     {
@@ -50,6 +51,7 @@ if settings.startup["wood-military-smg-ammo"].value then
 end
 
 -------------------------------------------------------------------------- Shotgun
+
 if settings.startup["wood-military-shotgun-ammo"].value then
   data:extend({
     {
@@ -105,6 +107,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
 end
 
 -------------------------------------------------------------------------- Sniper rifle
+
 if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo"].value then
   data:extend({
     {
@@ -153,6 +156,7 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
 end
 
 -------------------------------------------------------------------------- Artillery
+
 if settings.startup["wood-military-artillery"].value then
   data:extend({
     {
@@ -193,6 +197,7 @@ if settings.startup["wood-military-artillery"].value then
 end
 
 -------------------------------------------------------------------------- Armor
+
 if settings.startup["wood-military-armor"].value then
   data:extend({
     {
@@ -200,8 +205,7 @@ if settings.startup["wood-military-armor"].value then
       name = "wood-armor",
       icon = "__wood-military__/graphics/icons/wood-armor.png",
       icon_size = 64, icon_mipmaps = 4,
-      resistances =
-      {
+      resistances = {
         {
           type = "physical",
           decrease = 2,
