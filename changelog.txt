@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+  Features:
+    - Add optional dependency for cupric asteroids, since wooden darts magazines require copper which is otherwise unobtainable directly on the Space Platform
+
+---------------------------------------------------------------------------------------------------
 Version: 2.1.1
   Features:
     - Add a setting to only start the game with wood darts (you always respawn with darts)
