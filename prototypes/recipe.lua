@@ -1,6 +1,16 @@
 local wood_cost = settings.startup["wood-military-ammo-cost"].value
-local lumber_item = (mods["wood-logistics"] and settings.startup["wood-logistics-lumber"].value) and "lumber" or "wood"
 local chip_item = mods["wood-industry"] and "woodchips" or "wood"
+
+local lumber_item = "wood"
+local recipe_category = "crafting"
+if mods["wood-logistics"] then
+  if settings.startup["wood-logistics-lumber"].value then
+    lumber_item = "lumber"
+  end
+  if settings.startup["wood-logistics-lumber-mill"].value then
+    recipe_category = "crafting-or-carpentry"
+  end
+end
 
 -------------------------------------------------------------------------- Pistol/smg ammo
 
@@ -9,6 +19,7 @@ if settings.startup["wood-military-smg-ammo"].value then
     {
       type = "recipe",
       name = "wood-darts-magazine",
+      category = recipe_category,
       energy_required = 1,
       ingredients = {{type="item", name="wood", amount=wood_cost}},
       results = {{type="item", name="wood-darts-magazine", amount=1}}
@@ -23,6 +34,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
     {
       type = "recipe",
       name = "wood-shotgun-shell",
+      category = recipe_category,
       enabled = false,
       energy_required = 1,
       ingredients = {{type="item", name=chip_item, amount=wood_cost}},
@@ -38,6 +50,7 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
     {
       type = "recipe",
       name = "wood-bolts-magazine",
+      category = recipe_category,
       enabled = false,
       energy_required = 1,
       ingredients = {
@@ -56,6 +69,7 @@ if settings.startup["wood-military-artillery"].value then
     {
       type = "recipe",
       name = "wood-artillery-shell",
+      category = recipe_category,
       enabled = false,
       energy_required = 3,
       ingredients = {

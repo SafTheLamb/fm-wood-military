@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+  Features:
+    - Add recipe category support for new Lumber Mill from Wooden Logistics
+
+---------------------------------------------------------------------------------------------------
 Version: 2.2.0
   Features:
     - Add optional dependency for cupric asteroids, since wooden darts magazines require copper which is otherwise unobtainable directly on the Space Platform
