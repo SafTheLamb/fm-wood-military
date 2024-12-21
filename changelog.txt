@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+  Changes:
+    - Add optional compatibility with Early agriculture
+  Bugfixes:
+    - Fix compatibility with Distant Misfires combined with Sniper Rifle Improved
+
+---------------------------------------------------------------------------------------------------
 Version: 2.2.1
   Features:
     - Add recipe category support for new Lumber Mill from Wooden Logistics

@@ -125,6 +125,12 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
             action_delivery = {
               {
                 type = "instant",
+                source_effects = {
+                  {
+                    type = "create-explosion",
+                    entity_name = "explosion-woodshot-small"
+                  }
+                },
                 target_effects = {
                   {
                     type = "create-entity",
