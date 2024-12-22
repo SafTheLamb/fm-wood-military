@@ -15,13 +15,21 @@ data:extend({
     default_value = true,
     order = "a[ammo]-b[shotgun]"
   },
+  -- add wood rockets for vanilla rocket launchers
+  {
+    type = "bool-setting",
+    name = "wood-military-rockets",
+    setting_type = "startup",
+    default_value = true,
+    order = "a[ammo]-d[rocket]"
+  },
   -- add wood artillery shell for artillery cannons
   {
     type = "bool-setting",
     name = "wood-military-artillery",
     setting_type = "startup",
     default_value = true,
-    order = "a[ammo]-d[artillery]"
+    order = "a[ammo]-e[artillery]"
   },
   -- how much wood each ammo item costs
   {

@@ -23,13 +23,124 @@ if settings.startup["wood-military-shotgun-ammo"].value then
       },
       animation =
       {
-        filename = "__wood-military__/graphics/entity/wood-bullet/wood-bullet.png",
+        filename = "__wood-base-assets__/graphics/entity/wood-bullet/wood-bullet.png",
         draw_as_glow = false,
         frame_count = 1,
         width = 3,
         height = 50,
         priority = "high"
       }
+    }
+  })
+end
+
+-------------------------------------------------------------------------- Rockets
+
+if settings.startup["wood-military-rockets"].value then
+  data:extend({
+    {
+      type = "projectile",
+      name = "scorpion-bolt",
+      flags = {"not-on-map"},
+      hidden = true,
+      acceleration = 0,
+      turn_speed = 0.001,
+      turning_speed_increases_exponentially_with_projectile_speed = false,
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "instant",
+          target_effects = {
+            {
+              type = "create-entity",
+              entity_name = "big-explosion-hit-splinters"
+            },
+            {
+              type = "damage",
+              damage = {amount=75, type="physical"}
+            },
+            {
+              type = "invoke-tile-trigger",
+              repeat_count = 1
+            },
+            {
+              type = "destroy-decoratives",
+              from_render_layer = "decorative",
+              to_render_layer = "object",
+              include_soft_decoratives = true,
+              include_decals = false,
+              invoke_decorative_trigger = true,
+              decoratives_with_trigger_only = false,
+              radius = 0.5
+            }
+          }
+        }
+      },
+      animation = require("__wood-military__.prototypes.entity.rocket-projectile-pictures").animation({1, 0.8, 0.3}),
+      shadow = require("__wood-military__.prototypes.entity.rocket-projectile-pictures").shadow
+    },
+  
+    {
+      type = "projectile",
+      name = "splinter-bolt",
+      flags = {"not-on-map"},
+      hidden = true,
+      acceleration = 0,
+      turn_speed = 0.001,
+      turning_speed_increases_exponentially_with_projectile_speed = false,
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "instant",
+          target_effects = {
+            {
+              type = "create-entity",
+              entity_name = "explosion"
+            },
+            {
+              type = "damage",
+              damage = {amount=25, type="physical"}
+            },
+            {
+              type = "create-entity",
+              entity_name = "small-scorchmark-tintable",
+              check_buildability = true
+            },
+            {
+              type = "invoke-tile-trigger",
+              repeat_count = 1
+            },
+            {
+              type = "destroy-decoratives",
+              from_render_layer = "decorative",
+              to_render_layer = "object",
+              include_soft_decoratives = true,
+              include_decals = false,
+              invoke_decorative_trigger = true,
+              decoratives_with_trigger_only = false,
+              radius = 1
+            },
+            {
+              type = "nested-result",
+              action = {
+                type = "area",
+                radius = 0.75,
+                action_delivery = {
+                  type = "instant",
+                  target_effects = {
+                    {
+                      type = "damage",
+                      damage = {amount=50, type="physical"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      animation = require("__wood-military__.prototypes.entity.rocket-projectile-pictures").animation({1, 0.2, 0.2}),
+      shadow = require("__wood-military__.prototypes.entity.rocket-projectile-pictures").shadow
     }
   })
 end
@@ -44,7 +155,7 @@ if settings.startup["wood-military-artillery"].value then
       reveal_map = true,
       map_color = {r=1, g=1, b=0},
       picture = {
-        filename = "__wood-military__/graphics/entity/wood-artillery-projectile/hr-wood-shell.png",
+        filename = "__wood-base-assets__/graphics/entity/wood-artillery-projectile/wood-shell.png",
         draw_as_glow = true,
         width = 64,
         height = 64,
@@ -80,7 +191,7 @@ if settings.startup["wood-military-artillery"].value then
                   target_effects = {
                     {
                       type = "damage",
-                      damage = {amount = 250 , type = "physical"}
+                      damage = {amount=250, type="physical"}
                     }
                   }
                 }

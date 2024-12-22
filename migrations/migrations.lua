@@ -17,4 +17,18 @@ for _,force in pairs(game.forces) do
   else
     recipes["shotgun-shell"].enabled = military1
   end
+
+  if settings.startup["wood-military-rockets"].value then
+    local rocketry = technologies["rocketry"].researched
+    recipes["scorpion-bolt"].enabled = rocketry
+    recipes["splinter-bolt"].enabled = rocketry
+  end
+
+  if settings.startup["wood-military-artillery"].value then
+    local artillery = technologies["artillery"].researched
+    if script.active_mods["basic-artillery"] then
+      artillery = technologies["basic-artillery"].researched
+    end
+    recipes["wood-artillery-shell"].enabled = artillery
+  end
 end

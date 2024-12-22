@@ -62,6 +62,35 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
   })
 end
 
+-------------------------------------------------------------------------- Rockets
+
+if settings.startup["wood-military-rockets"].value then
+  data:extend({
+    {
+      type = "recipe",
+      name = "scorpion-bolt",
+      enabled = false,
+      energy_required = 1,
+      ingredients = {
+        {type="item", name="coal", amount=5},
+        {type="item", name=lumber_item, amount=2}
+      },
+      results = {{type="item", name="scorpion-bolt", amount=1}}
+    },
+    {
+      type = "recipe",
+      name = "splinter-bolt",
+      enabled = false,
+      energy_required = 2,
+      ingredients = {
+        {type="item", name="scorpion-bolt", amount=1},
+        {type="item", name="explosives", amount=1}
+      },
+      results = {{type="item", name="splinter-bolt", amount=1}}
+    }
+  })
+end
+
 -------------------------------------------------------------------------- Artillery shell
 
 if settings.startup["wood-military-artillery"].value then

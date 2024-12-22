@@ -7,7 +7,7 @@ if settings.startup["wood-military-smg-ammo"].value then
     {
       type = "ammo",
       name = "wood-darts-magazine",
-      icon = "__wood-military__/graphics/icons/wood-darts-magazine.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-darts-magazine.png",
       ammo_category = "bullet",
       ammo_type = {
         range_modifier = 0.8,
@@ -57,7 +57,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
     {
       type = "ammo",
       name = "wood-shotgun-shell",
-      icon = "__wood-military__/graphics/icons/wood-shotgun-shell.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-shotgun-shell.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "shotgun-shell",
       ammo_type = {
@@ -113,7 +113,7 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
     {
       type = "ammo",
       name = "wood-bolts-magazine",
-      icon = "__wood-military__/graphics/icons/wood-bolts-magazine.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-bolts-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "rifle-bullet",
       ammo_type = {
@@ -161,6 +161,67 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
   })
 end
 
+-------------------------------------------------------------------------- Rockets
+
+if settings.startup["wood-military-rockets"].value then
+  data:extend({
+    {
+      type = "ammo",
+      name = "scorpion-bolt",
+      icon = "__wood-base-assets__/graphics/icons/scorpion-bolt.png",
+      ammo_category = "rocket",
+      ammo_type = {
+        action = {
+          type = "direct",
+          action_delivery = {
+            type = "projectile",
+            projectile = "scorpion-bolt",
+            starting_speed = 1,
+            source_effects = {
+              type = "create-entity",
+              entity_name = "explosion-woodshot-small"
+            }
+          }
+        }
+      },
+      subgroup = "ammo",
+      order = "d[rocket-launcher]-A[wood]-a[basic]",
+      inventory_move_sound = item_sounds.wood_inventory_move,
+      pick_sound = item_sounds.wood_inventory_pickup,
+      drop_sound = item_sounds.wood_inventory_move,
+      stack_size = 100,
+      weight = 40*kg
+    },
+    {
+      type = "ammo",
+      name = "splinter-bolt",
+      icon = "__wood-base-assets__/graphics/icons/splinter-bolt.png",
+      ammo_category = "rocket",
+      ammo_type = {
+        action = {
+          type = "direct",
+          action_delivery = {
+            type = "projectile",
+            projectile = "splinter-bolt",
+            starting_speed = 1,
+            source_effects = {
+              type = "create-entity",
+              entity_name = "explosion-woodshot-small"
+            }
+          }
+        }
+      },
+      subgroup = "ammo",
+      order = "d[rocket-launcher]-A[wood]-b[explosive]",
+      inventory_move_sound = item_sounds.wood_inventory_move,
+      pick_sound = item_sounds.wood_inventory_pickup,
+      drop_sound = item_sounds.wood_inventory_move,
+      stack_size = 100,
+      weight = 40*kg
+    },
+  })
+end
+
 -------------------------------------------------------------------------- Artillery
 
 if settings.startup["wood-military-artillery"].value then
@@ -168,7 +229,7 @@ if settings.startup["wood-military-artillery"].value then
     {
       type = "ammo",
       name = "wood-artillery-shell",
-      icon = "__wood-military__/graphics/icons/wood-artillery-shell.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-artillery-shell.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "artillery-shell",
       ammo_type = {
@@ -209,7 +270,7 @@ if settings.startup["wood-military-armor"].value then
     {
       type = "armor",
       name = "wood-armor",
-      icon = "__wood-military__/graphics/icons/wood-armor.png",
+      icon = "__wood-base-assets__/graphics/icons/wood-armor.png",
       icon_size = 64, icon_mipmaps = 4,
       resistances = {
         {

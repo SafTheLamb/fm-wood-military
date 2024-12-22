@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+  Major Features:
+    - Add Wooden rockets
+  Changes:
+    - Move all assets into a separate mod (wood-base-assets) to reduce large frequent download sizes
+    - Add support for Basic artillery mod
+
+---------------------------------------------------------------------------------------------------
 Version: 2.2.2
   Changes:
     - Add optional compatibility with Early agriculture

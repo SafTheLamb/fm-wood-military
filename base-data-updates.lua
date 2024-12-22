@@ -37,7 +37,7 @@ if settings.startup["wood-military-damage-buff"].value then
   fmut.mutate(damage_increases, buff_damage)
 end
 
--------------------------------------------------------------------------- Recipe changes
+-------------------------------------------------------------------------- SMG ammo
 
 if settings.startup["wood-military-smg-ammo"].value then
   frep.add_ingredient("firearm-magazine", {type="item", name="wood-darts-magazine", amount=1})
@@ -50,6 +50,8 @@ if settings.startup["wood-military-smg-ammo"].value then
   end
 end
 
+-------------------------------------------------------------------------- Shotgun ammo
+
 if settings.startup["wood-military-shotgun-ammo"].value then
   frep.add_ingredient("shotgun-shell", {type="item", name="wood-shotgun-shell", amount=1})
   
@@ -59,6 +61,8 @@ if settings.startup["wood-military-shotgun-ammo"].value then
     frep.add_ingredient("piercing-shotgun-shell", {type="item", name="plastic-bar", amount=2})
   end
 end
+
+-------------------------------------------------------------------------- Sniper ammo
 
 if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo"].value then
   frep.add_ingredient("sniper-magazine-1", {type="item", name="wood-bolts-magazine", amount=1})
@@ -72,6 +76,14 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
   end
 end
 
+-------------------------------------------------------------------------- Rocket ammo
+
+if settings.startup["wood-military-sniper-ammo"].value then
+  frep.add_ingredient("rocket", {type="item", name="splinter-bolt", amount=1})
+end
+
+-------------------------------------------------------------------------- Armor
+
 if settings.startup["wood-military-armor"].value then
   if frep.get_ingredient("heavy-armor", "light-armor") then
     frep.add_ingredient("light-armor", {type="item", name="wood-armor", amount=1})
@@ -81,54 +93,4 @@ if settings.startup["wood-military-armor"].value then
     frep.add_ingredient("light-armor", {type="item", name="steel-plate", amount=10})
     frep.add_ingredient("heavy-armor", {type="item", name="plastic-bar", amount=10})
   end
-end
-
--------------------------------------------------------------------------- Technology changes
-
-if settings.startup["wood-military-smg-ammo"].value then
-  ftech.add_unlock("military", "firearm-magazine")
-end
-
-if settings.startup["wood-military-shotgun-ammo"].value then
-  ftech.add_unlock("military", "wood-shotgun-shell")
-  ftech.remove_unlock("military", "shotgun-shell")
-  ftech.add_unlock("military-2", "shotgun-shell")
-
-  if mods["wood-industry"] and not settings.startup["wood-military-hard-mode"].value then
-    ftech.add_prereq("military", "wood-pyrolysis")
-  end
-end
-
-if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo"].value then
-  ftech.add_unlock("military", "carbine-rifle")
-  ftech.add_unlock("military", "wood-bolts-magazine")
-  ftech.remove_unlock("military-2", "carbine-rifle")
-end
-
-if settings.startup["wood-military-armor"].value then
-  ftech.add_unlock("military", "light-armor")
-  
-  if settings.startup["wood-military-hard-mode"].value then
-    ftech.add_prereq("heavy-armor", "plastics")
-    ftech.add_cost_ingredient("heavy-armor", "logistic-science-pack")
-    ftech.modify_cost("heavy-armor", {count=75})
-  end
-end
-
-if settings.startup["wood-military-hard-mode"].value then
-  ftech.add_prereq("military", "steel-processing")
-  ftech.modify_cost("military", {count=25})
-
-  ftech.add_prereq("military-2", "plastics")
-  ftech.remove_prereq("military-2", "steel-processing")
-  ftech.remove_prereq("military-2", "logistic-science-pack")
-  ftech.modify_cost("military-2", {count=50})
-
-  if not settings.startup["wood-military-armor"].value then
-    ftech.add_unlock("military", "light-armor")
-  end
-end
-
-if settings.startup["wood-military-artillery"].value then
-  ftech.add_unlock("artillery", "wood-artillery-shell")
 end
