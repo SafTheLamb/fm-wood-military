@@ -78,7 +78,7 @@ end
 
 -------------------------------------------------------------------------- Rocket ammo
 
-if settings.startup["wood-military-sniper-ammo"].value then
+if settings.startup["wood-military-rockets"].value then
   frep.add_ingredient("rocket", {type="item", name="splinter-bolt", amount=1})
 end
 
