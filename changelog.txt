@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.2
+  Bugfixes:
+    - Fix wooden rockets and splinter rockets being bad (homing didn't really work)
+    - Fix splinter explosion particles
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.1
   Bugfixes:
     - Fix crash when sniper rifle improved isn't installed

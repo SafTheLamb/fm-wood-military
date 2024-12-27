@@ -43,9 +43,9 @@ if settings.startup["wood-military-rockets"].value then
       name = "scorpion-bolt",
       flags = {"not-on-map"},
       hidden = true,
-      acceleration = 0,
-      turn_speed = 0.001,
-      turning_speed_increases_exponentially_with_projectile_speed = false,
+      acceleration = 0.01,
+      turn_speed = 0.003,
+      turning_speed_increases_exponentially_with_projectile_speed = true,
       action = {
         type = "direct",
         action_delivery = {
@@ -85,9 +85,9 @@ if settings.startup["wood-military-rockets"].value then
       name = "splinter-bolt",
       flags = {"not-on-map"},
       hidden = true,
-      acceleration = 0,
-      turn_speed = 0.001,
-      turning_speed_increases_exponentially_with_projectile_speed = false,
+      acceleration = 0.008,
+      turn_speed = 0.0024,
+      turning_speed_increases_exponentially_with_projectile_speed = true,
       action = {
         type = "direct",
         action_delivery = {

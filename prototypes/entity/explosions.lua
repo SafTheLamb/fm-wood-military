@@ -57,6 +57,7 @@ data:extend({
           type = "create-particle",
           repeat_count = 2,
           particle_name = "wooden-chest-wooden-splinter-particle-small",
+          offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
           initial_height = 0.5,
           initial_height_deviation = 0.04,
           initial_vertical_speed = 0.069,
@@ -77,6 +78,7 @@ data:extend({
     smoke = "smoke-fast",
     smoke_count = 1,
     smoke_slow_down_factor = 1,
+    sound = sounds.small_explosion,
     created_effect = {
       type = "direct",
       action_delivery = {
@@ -86,23 +88,25 @@ data:extend({
             type = "create-particle",
             repeat_count = 5,
             particle_name = "wooden-chest-wooden-splinter-particle-medium",
+            offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
             initial_height = 0.5,
             initial_height_deviation = 0.04,
             initial_vertical_speed = 0.069,
             initial_vertical_speed_deviation = 0.025,
-            speed_from_center = 0.01,
-            speed_from_center_deviation = 0.023
+            speed_from_center = 0.02,
+            speed_from_center_deviation = 0.033
           },
           {
             type = "create-particle",
             repeat_count = 20,
             particle_name = "wooden-chest-wooden-splinter-particle-small",
+            offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
             initial_height = 0.5,
             initial_height_deviation = 0.08,
             initial_vertical_speed = 0.13,
             initial_vertical_speed_deviation = 0.05,
-            speed_from_center = 0.02,
-            speed_from_center_deviation = 0.046
+            speed_from_center = 0.03,
+            speed_from_center_deviation = 0.052
           }
         }
       }
@@ -128,12 +132,12 @@ data:extend({
             type = "create-particle",
             repeat_count = 50,
             particle_name = "wooden-chest-wooden-splinter-particle-medium",
+            offset_deviation = {{-0.8984, -0.5}, {0.8984, 0.5}},
             initial_height = 0.5,
             speed_from_center = 0.1,
             speed_from_center_deviation = 0.15,
             initial_vertical_speed = 0.08,
             initial_vertical_speed_deviation = 0.15,
-            offset_deviation = {{-0.8984, -0.5}, {0.8984, 0.5}}
           },
           {
             type = "create-particle",
