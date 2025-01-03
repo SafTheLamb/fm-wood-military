@@ -40,8 +40,11 @@ end
 -------------------------------------------------------------------------- SMG ammo
 
 if settings.startup["wood-military-smg-ammo"].value then
-  frep.add_ingredient("firearm-magazine", {type="item", name="wood-darts-magazine", amount=1})
-
+  if mods["More_Ammo"] then
+    frep.add_ingredient("wood-darts-magazine", {type="item", name="empty-magazine", amount=1})
+  else
+    frep.add_ingredient("firearm-magazine", {type="item", name="wood-darts-magazine", amount=1})
+  end
   if settings.startup["wood-military-hard-mode"].value then
     frep.replace_ingredient("submachine-gun", "iron-plate", "steel-plate")
     frep.add_ingredient("wood-darts-magazine", {type="item", name="copper-plate", amount=1})
@@ -53,7 +56,11 @@ end
 -------------------------------------------------------------------------- Shotgun ammo
 
 if settings.startup["wood-military-shotgun-ammo"].value then
-  frep.add_ingredient("shotgun-shell", {type="item", name="wood-shotgun-shell", amount=1})
+  if mods["More_Ammo"] then
+    frep.add_ingredient("wood-shotgun-shell", {type="item", name="empty-shotgun-shell", amount=1})
+  else
+    frep.add_ingredient("shotgun-shell", {type="item", name="wood-shotgun-shell", amount=1})
+  end
   
   if settings.startup["wood-military-hard-mode"].value then
     frep.replace_ingredient("shotgun", "iron-plate", "steel-plate")

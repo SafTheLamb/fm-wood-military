@@ -37,7 +37,7 @@ data:extend({
     name = "wood-military-ammo-cost",
     setting_type = "startup",
     minimum_value = 1,
-    default_value = 4,
+    default_value = 2,
     order = "b[ammo-details]-a[cost]"
   },
   -- make ammo recipes more difficult
@@ -55,6 +55,16 @@ data:extend({
     setting_type = "startup",
     default_value = true,
     order = "b[ammo-details]-c[buff]"
+  },
+  -- scalar for the range and firerate of wooden ammo (1 = no change)
+  {
+    type = "double-setting",
+    name = "wood-military-wood-modifier",
+    setting_type = "startup",
+    minimum_value = 0.5,
+    maximum_value = 1.0,
+    default_value = 0.85,
+    order = "b[ammo-details]-d[nerf]"
   },
   -- add wood armor
   {

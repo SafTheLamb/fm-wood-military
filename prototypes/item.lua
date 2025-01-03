@@ -1,5 +1,8 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
+local wood_nerf_modifier = settings.startup["wood-military-wood-modifier"].value
+local inv_nerf_modifier = 1/wood_nerf_modifier
+
 -------------------------------------------------------------------------- SMG
 
 if settings.startup["wood-military-smg-ammo"].value then
@@ -10,8 +13,8 @@ if settings.startup["wood-military-smg-ammo"].value then
       icon = "__wood-base-assets__/graphics/icons/wood-darts-magazine.png",
       ammo_category = "bullet",
       ammo_type = {
-        range_modifier = 0.8,
-        cooldown_modifier = 1/0.8,
+        range_modifier = wood_nerf_modifier,
+        cooldown_modifier = inv_nerf_modifier,
         action = {
           type = "direct",
           action_delivery = {
@@ -38,7 +41,7 @@ if settings.startup["wood-military-smg-ammo"].value then
         }
       },
       magazine_size = 10,
-      reload_time = 45,
+      reload_time = 100 * (1 - wood_nerf_modifier),
       subgroup = "ammo",
       order = "a[basic-clips]-A[wood-darts-magazine]",
       inventory_move_sound = item_sounds.wood_inventory_move,
@@ -61,8 +64,8 @@ if settings.startup["wood-military-shotgun-ammo"].value then
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "shotgun-shell",
       ammo_type = {
-        range_modifier = 0.8,
-        cooldown_modifier = 1/0.8,
+        range_modifier = wood_nerf_modifier,
+        cooldown_modifier = inv_nerf_modifier,
         target_type = "direction",
         clamp_position = true,
         action = {
@@ -94,7 +97,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
         }
       },
       magazine_size = 10,
-      reload_time = 45,
+      reload_time = 200 * (1 - wood_nerf_modifier),
       subgroup = "ammo",
       order = "b[shotgun]-A[wooden]",
       inventory_move_sound = item_sounds.wood_inventory_move,
@@ -117,8 +120,8 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "rifle-bullet",
       ammo_type = {
-        range_modifier = 0.8,
-        cooldown_modifier = 1/0.8,
+        range_modifier = wood_nerf_modifier,
+        cooldown_modifier = inv_nerf_modifier,
         action = {
           {
             type = "direct",
@@ -149,7 +152,7 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
         }
       },
       magazine_size = 5,
-      reload_time = 75,
+      reload_time = 300 * (1 - wood_nerf_modifier),
       subgroup = "ammo",
       order = "a[basic-clips]-d[sniper-magazine-0]",
       inventory_move_sound = item_sounds.wood_inventory_move,
@@ -171,8 +174,8 @@ if settings.startup["wood-military-rockets"].value then
       icon = "__wood-base-assets__/graphics/icons/scorpion-bolt.png",
       ammo_category = "rocket",
       ammo_type = {
-        range_modifier = 0.8,
-        cooldown_modifier = 1/0.8,
+        range_modifier = wood_nerf_modifier,
+        cooldown_modifier = inv_nerf_modifier,
         action = {
           type = "direct",
           action_delivery = {
@@ -200,8 +203,8 @@ if settings.startup["wood-military-rockets"].value then
       icon = "__wood-base-assets__/graphics/icons/splinter-bolt.png",
       ammo_category = "rocket",
       ammo_type = {
-        range_modifier = 0.8,
-        cooldown_modifier = 1/0.8,
+        range_modifier = wood_nerf_modifier,
+        cooldown_modifier = inv_nerf_modifier,
         action = {
           type = "direct",
           action_delivery = {

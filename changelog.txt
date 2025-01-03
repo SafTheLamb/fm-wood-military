@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.3
+  Minor Features:
+    - Add compatibility with More Ammo
+    - Add settings to control how much to nerf Wooden ammo's secondary stats
+    - Improve compatibility with Distant Misfires (projectile range is affected by wood nerf scalar)
+  Changes:
+    - Reduce default wood ammo from 4 to 2, since this drastically affects difficulty of space defense
+    - Slightly buff wood ammo (slightly increased firerate and range, and ~halved reload time)
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.2
   Bugfixes:
     - Fix wooden rockets and splinter rockets being bad (homing didn't really work)
