@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.4
+  Minor Features:
+    - Add setting to make vanilla ammo not cost wood ammo
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.3
   Minor Features:
     - Add compatibility with More Ammo

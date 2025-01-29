@@ -40,13 +40,21 @@ data:extend({
     default_value = 2,
     order = "b[ammo-details]-a[cost]"
   },
+  -- whether to make base-tier vanilla ammo cost wood
+  {
+    type = "bool-setting",
+    name = "wood-military-modify-vanilla",
+    setting_type = "startup",
+    default_value = true,
+    order = "b[ammo-details]-b[modify]"
+  },
   -- make ammo recipes more difficult
   {
     type = "bool-setting",
     name = "wood-military-hard-mode",
     setting_type = "startup",
     default_value = false,
-    order = "b[ammo-details]-b[hard-mode]"
+    order = "b[ammo-details]-c[hard-mode]"
   },
   -- increase damage of non-wood ammo for increased catharsis
   {
@@ -54,7 +62,7 @@ data:extend({
     name = "wood-military-damage-buff",
     setting_type = "startup",
     default_value = true,
-    order = "b[ammo-details]-c[buff]"
+    order = "b[ammo-details]-d[buff]"
   },
   -- scalar for the range and firerate of wooden ammo (1 = no change)
   {
@@ -64,7 +72,7 @@ data:extend({
     minimum_value = 0.5,
     maximum_value = 1.0,
     default_value = 0.85,
-    order = "b[ammo-details]-d[nerf]"
+    order = "b[ammo-details]-e[nerf]"
   },
   -- add wood armor
   {

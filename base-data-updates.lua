@@ -42,7 +42,7 @@ end
 if settings.startup["wood-military-smg-ammo"].value then
   if mods["More_Ammo"] then
     frep.add_ingredient("wood-darts-magazine", {type="item", name="empty-magazine", amount=1})
-  else
+  elseif settings.startup["wood-military-modify-vanilla"].value then
     frep.add_ingredient("firearm-magazine", {type="item", name="wood-darts-magazine", amount=1})
   end
   if settings.startup["wood-military-hard-mode"].value then
@@ -58,7 +58,7 @@ end
 if settings.startup["wood-military-shotgun-ammo"].value then
   if mods["More_Ammo"] then
     frep.add_ingredient("wood-shotgun-shell", {type="item", name="empty-shotgun-shell", amount=1})
-  else
+  elseif settings.startup["wood-military-modify-vanilla"].value then
     frep.add_ingredient("shotgun-shell", {type="item", name="wood-shotgun-shell", amount=1})
   end
   
@@ -72,7 +72,9 @@ end
 -------------------------------------------------------------------------- Sniper ammo
 
 if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo"].value then
-  frep.add_ingredient("sniper-magazine-1", {type="item", name="wood-bolts-magazine", amount=1})
+  if settings.startup["wood-military-modify-vanilla"].value then
+    frep.add_ingredient("sniper-magazine-1", {type="item", name="wood-bolts-magazine", amount=1})
+  end
   
   if settings.startup["wood-military-hard-mode"].value then
     frep.add_ingredient("wood-bolts-magazine", {type="item", name="copper-plate", amount=2})
@@ -86,7 +88,9 @@ end
 -------------------------------------------------------------------------- Rocket ammo
 
 if settings.startup["wood-military-rockets"].value then
-  frep.add_ingredient("rocket", {type="item", name="splinter-bolt", amount=1})
+  if settings.startup["wood-military-modify-vanilla"].value then
+    frep.add_ingredient("rocket", {type="item", name="splinter-bolt", amount=1})
+  end
 end
 
 -------------------------------------------------------------------------- Armor
