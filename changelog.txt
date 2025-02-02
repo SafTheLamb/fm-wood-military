@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.5
+  Bugfixes:
+    - Hide effects in factoriopedia
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.4
   Minor Features:
     - Add setting to make vanilla ammo not cost wood ammo
