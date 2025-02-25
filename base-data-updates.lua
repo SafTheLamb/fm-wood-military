@@ -45,12 +45,7 @@ if settings.startup["wood-military-smg-ammo"].value then
   elseif settings.startup["wood-military-modify-vanilla"].value then
     frep.add_ingredient("firearm-magazine", {type="item", name="wood-darts-magazine", amount=1})
   end
-  if settings.startup["wood-military-hard-mode"].value then
-    frep.replace_ingredient("submachine-gun", "iron-plate", "steel-plate")
-    frep.add_ingredient("wood-darts-magazine", {type="item", name="copper-plate", amount=1})
-    frep.add_ingredient("firearm-magazine", {type="item", name="steel-plate", amount=1})
-    frep.add_ingredient("piercing-rounds-magazine", {type="item", name="plastic-bar", amount=2})
-  end
+  frep.replace_ingredient("submachine-gun", "iron-plate", "steel-plate")
 end
 
 -------------------------------------------------------------------------- Shotgun ammo
@@ -62,11 +57,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
     frep.add_ingredient("shotgun-shell", {type="item", name="wood-shotgun-shell", amount=1})
   end
   
-  if settings.startup["wood-military-hard-mode"].value then
-    frep.replace_ingredient("shotgun", "iron-plate", "steel-plate")
-    frep.add_ingredient("wood-shotgun-shell", {type="item", name="copper-plate", amount=2})
-    frep.add_ingredient("piercing-shotgun-shell", {type="item", name="plastic-bar", amount=2})
-  end
+  frep.replace_ingredient("shotgun", "iron-plate", "steel-plate")
 end
 
 -------------------------------------------------------------------------- Sniper ammo
@@ -74,14 +65,6 @@ end
 if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo"].value then
   if settings.startup["wood-military-modify-vanilla"].value then
     frep.add_ingredient("sniper-magazine-1", {type="item", name="wood-bolts-magazine", amount=1})
-  end
-  
-  if settings.startup["wood-military-hard-mode"].value then
-    frep.add_ingredient("wood-bolts-magazine", {type="item", name="copper-plate", amount=2})
-    frep.replace_ingredient("sniper-magazine-1", "copper-plate", "plastic-bar")
-    frep.add_ingredient("sniper-magazine-2", {type="item", name="plastic-bar", amount=4})
-    frep.modify_ingredient("sniper-magazine-2", "sniper-magazine-1", {amount=1})
-    frep.modify_result("sniper-magazine-2", "sniper-magazine-2", {amount=1})
   end
 end
 
@@ -100,8 +83,6 @@ if settings.startup["wood-military-armor"].value then
     frep.add_ingredient("light-armor", {type="item", name="wood-armor", amount=1})
   end
 
-  if settings.startup["wood-military-hard-mode"].value then
-    frep.add_ingredient("light-armor", {type="item", name="steel-plate", amount=10})
-    frep.add_ingredient("heavy-armor", {type="item", name="plastic-bar", amount=10})
-  end
+  frep.add_ingredient("light-armor", {type="item", name="steel-plate", amount=10})
+  frep.add_ingredient("heavy-armor", {type="item", name="plastic-bar", amount=20})
 end

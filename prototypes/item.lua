@@ -280,26 +280,10 @@ if settings.startup["wood-military-armor"].value then
       icon = "__wood-base-assets__/graphics/icons/wood-armor.png",
       icon_size = 64, icon_mipmaps = 4,
       resistances = {
-        {
-          type = "physical",
-          decrease = 2,
-          percent = 10
-        },
-        {
-          type = "acid",
-          decrease = 0,
-          percent = 10
-        },
-        {
-          type = "explosion",
-          decrease = 1,
-          percent = 10
-        },
-        {
-          type = "fire",
-          decrease = 0,
-          percent = -90
-        }
+        {type="physical", decrease=2, percent=10},
+        {type="acid", decrease= 2, percent=60},
+        {type="explosion", decrease=1, percent=10},
+        {type="fire", decrease=0, percent=-90}
       },
       subgroup = "armor",
       order = "A[wood-armor]",

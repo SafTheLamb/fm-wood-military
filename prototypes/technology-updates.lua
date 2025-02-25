@@ -12,10 +12,6 @@ if settings.startup["wood-military-shotgun-ammo"].value then
   ftech.add_unlock("military", "wood-shotgun-shell")
   ftech.remove_unlock("military", "shotgun-shell")
   ftech.add_unlock("military-2", "shotgun-shell")
-
-  if mods["wood-industry"] and not settings.startup["wood-military-hard-mode"].value then
-    ftech.add_prereq("military", "wood-pyrolysis")
-  end
 end
 
 -------------------------------------------------------------------------- Sniper ammo
@@ -49,27 +45,16 @@ end
 
 if settings.startup["wood-military-armor"].value then
   ftech.add_unlock("military", "light-armor")
-  
-  if settings.startup["wood-military-hard-mode"].value then
-    ftech.add_prereq("heavy-armor", "plastics")
-    ftech.add_cost_ingredient("heavy-armor", "logistic-science-pack")
-    ftech.modify_cost("heavy-armor", {count=75})
-  end
+  ftech.remove_prereq("heavy-armor", "military")
+  ftech.add_prereq("heavy-armor", "plastics")
+  ftech.add_prereq("heavy-armor", "military-2")
+  ftech.add_cost_ingredient("heavy-armor", "logistic-science-pack")
+  ftech.modify_cost("heavy-armor", {count=75})
 end
 
 -------------------------------------------------------------------------- Hard mode
 
-if settings.startup["wood-military-hard-mode"].value then
-  ftech.add_prereq("military", "steel-processing")
-  ftech.modify_cost("military", {count=25})
-
-  ftech.add_prereq("military-2", "plastics")
-  ftech.remove_prereq("military-2", "steel-processing")
-  ftech.remove_prereq("military-2", "logistic-science-pack")
-  ftech.modify_cost("military-2", {count=50})
-
-  if not settings.startup["wood-military-armor"].value then
-    ftech.add_unlock("military", "light-armor")
-  end
-end
-
+ftech.add_prereq("military", "steel-processing")
+ftech.modify_cost("military", {count=25})
+ftech.remove_prereq("military-2", "steel-processing")
+ftech.modify_cost("military-2", {count=50})

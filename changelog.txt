@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.0
+  Changes:
+    - Give wooden armor 2/60% acid resistance
+    - Remove Hard mode, with Wooden Universe it's really not necessary
+    - Submachine guns, Shotguns, and Light armor now cost 10 Steel plates even without Hard mode
+    - Heavy armor now costs 20 Plastic bars even without Hard mode
+
+---------------------------------------------------------------------------------------------------
 Version: 2.3.5
   Bugfixes:
     - Hide effects in factoriopedia

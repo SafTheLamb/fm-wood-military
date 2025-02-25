@@ -1,5 +1,4 @@
 data:extend({
-  -- add wood darts magazine for vanilla pistol/smg
   {
     type = "bool-setting",
     name = "wood-military-smg-ammo",
@@ -7,7 +6,6 @@ data:extend({
     default_value = true,
     order = "a[ammo]-a[smg]"
   },
-  -- add wood shotgun shell for vanilla shotguns
   {
     type = "bool-setting",
     name = "wood-military-shotgun-ammo",
@@ -15,7 +13,6 @@ data:extend({
     default_value = true,
     order = "a[ammo]-b[shotgun]"
   },
-  -- add wood rockets for vanilla rocket launchers
   {
     type = "bool-setting",
     name = "wood-military-rockets",
@@ -23,7 +20,6 @@ data:extend({
     default_value = true,
     order = "a[ammo]-d[rocket]"
   },
-  -- add wood artillery shell for artillery cannons
   {
     type = "bool-setting",
     name = "wood-military-artillery",
@@ -31,7 +27,6 @@ data:extend({
     default_value = true,
     order = "a[ammo]-e[artillery]"
   },
-  -- how much wood each ammo item costs
   {
     type = "int-setting",
     name = "wood-military-ammo-cost",
@@ -40,7 +35,6 @@ data:extend({
     default_value = 2,
     order = "b[ammo-details]-a[cost]"
   },
-  -- whether to make base-tier vanilla ammo cost wood
   {
     type = "bool-setting",
     name = "wood-military-modify-vanilla",
@@ -48,15 +42,6 @@ data:extend({
     default_value = true,
     order = "b[ammo-details]-b[modify]"
   },
-  -- make ammo recipes more difficult
-  {
-    type = "bool-setting",
-    name = "wood-military-hard-mode",
-    setting_type = "startup",
-    default_value = false,
-    order = "b[ammo-details]-c[hard-mode]"
-  },
-  -- increase damage of non-wood ammo for increased catharsis
   {
     type = "bool-setting",
     name = "wood-military-damage-buff",
@@ -64,7 +49,6 @@ data:extend({
     default_value = true,
     order = "b[ammo-details]-d[buff]"
   },
-  -- scalar for the range and firerate of wooden ammo (1 = no change)
   {
     type = "double-setting",
     name = "wood-military-wood-modifier",
@@ -74,7 +58,13 @@ data:extend({
     default_value = 0.85,
     order = "b[ammo-details]-e[nerf]"
   },
-  -- add wood armor
+  {
+    type = "bool-setting",
+    name = "wood-military-carbon",
+    setting_type = "startup",
+    default_value = true,
+    order = "b[ammo-details]-c[carbon]"
+  },
   {
     type = "bool-setting",
     name = "wood-military-armor",
@@ -89,7 +79,17 @@ data:extend({
     setting_type = "runtime-global",
     default_value = false,
     order = "z[misc]-a[start]"
-  }
+  },
+
+  -- unused, but kept for backwards compatibility
+  {
+    type = "bool-setting",
+    name = "wood-military-hard-mode",
+    setting_type = "startup",
+    default_value = false,
+    order = "z[ammo-details]-z[hard-mode]",
+    hidden = true,
+  },
 })
 
 if mods["sniper-rifle-improved"] then
