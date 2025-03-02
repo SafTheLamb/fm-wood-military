@@ -60,13 +60,6 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "wood-military-carbon",
-    setting_type = "startup",
-    default_value = true,
-    order = "b[ammo-details]-c[carbon]"
-  },
-  {
-    type = "bool-setting",
     name = "wood-military-armor",
     setting_type = "startup",
     default_value = true,
