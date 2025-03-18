@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.2
+  Bugfixes:
+    - Merge scorpion bolt and splinter bolt into a singular kind of rocket launcher ammo
+
+---------------------------------------------------------------------------------------------------
 Version: 2.4.1
   Bugfixes:
     - Remove unused "Carbon Military" setting

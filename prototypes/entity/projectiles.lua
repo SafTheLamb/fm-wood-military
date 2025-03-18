@@ -5,6 +5,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
       type = "projectile",
       name = "wood-shotgun-pellet",
       flags = {"not-on-map"},
+      hidden = true,
       collision_box = {{-0.05, -0.25}, {0.05, 0.25}},
       acceleration = 0,
       direction_only = true,
@@ -38,48 +39,6 @@ end
 
 if settings.startup["wood-military-rockets"].value then
   data:extend({
-    {
-      type = "projectile",
-      name = "scorpion-bolt",
-      flags = {"not-on-map"},
-      hidden = true,
-      acceleration = 0.01,
-      turn_speed = 0.003,
-      turning_speed_increases_exponentially_with_projectile_speed = true,
-      action = {
-        type = "direct",
-        action_delivery = {
-          type = "instant",
-          target_effects = {
-            {
-              type = "create-entity",
-              entity_name = "big-explosion-hit-splinters"
-            },
-            {
-              type = "damage",
-              damage = {amount=75, type="physical"}
-            },
-            {
-              type = "invoke-tile-trigger",
-              repeat_count = 1
-            },
-            {
-              type = "destroy-decoratives",
-              from_render_layer = "decorative",
-              to_render_layer = "object",
-              include_soft_decoratives = true,
-              include_decals = false,
-              invoke_decorative_trigger = true,
-              decoratives_with_trigger_only = false,
-              radius = 0.5
-            }
-          }
-        }
-      },
-      animation = require("__wood-military__.prototypes.entity.rocket-projectile-pictures").animation({1, 0.8, 0.3}),
-      shadow = require("__wood-military__.prototypes.entity.rocket-projectile-pictures").shadow
-    },
-  
     {
       type = "projectile",
       name = "splinter-bolt",
@@ -153,6 +112,7 @@ if settings.startup["wood-military-artillery"].value then
       name = "wood-artillery-projectile",
       flags = {"not-on-map"},
       reveal_map = true,
+      hidden = true,
       map_color = {r=1, g=1, b=0},
       picture = {
         filename = "__wood-base-assets__/graphics/entity/wood-artillery-projectile/wood-shell.png",

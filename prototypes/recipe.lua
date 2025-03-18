@@ -1,5 +1,6 @@
 local wood_cost = settings.startup["wood-military-ammo-cost"].value
 local chip_item = mods["wood-industry"] and "woodchips" or "wood"
+local coal_item = mods["early-crushing"] and settings.startup["early-crushing-coal"].value and "crushed-coal" or "coal"
 
 local lumber_item = "wood"
 local recipe_category = "crafting"
@@ -68,23 +69,12 @@ if settings.startup["wood-military-rockets"].value then
   data:extend({
     {
       type = "recipe",
-      name = "scorpion-bolt",
+      name = "splinter-bolt",
       enabled = false,
       energy_required = 1,
       ingredients = {
-        {type="item", name="coal", amount=5},
+        {type="item", name=coal_item, amount=5},
         {type="item", name=lumber_item, amount=2}
-      },
-      results = {{type="item", name="scorpion-bolt", amount=1}}
-    },
-    {
-      type = "recipe",
-      name = "splinter-bolt",
-      enabled = false,
-      energy_required = 2,
-      ingredients = {
-        {type="item", name="scorpion-bolt", amount=1},
-        {type="item", name="explosives", amount=1}
       },
       results = {{type="item", name="splinter-bolt", amount=1}}
     }

@@ -170,35 +170,6 @@ if settings.startup["wood-military-rockets"].value then
   data:extend({
     {
       type = "ammo",
-      name = "scorpion-bolt",
-      icon = "__wood-base-assets__/graphics/icons/scorpion-bolt.png",
-      ammo_category = "rocket",
-      ammo_type = {
-        range_modifier = wood_nerf_modifier,
-        cooldown_modifier = inv_nerf_modifier,
-        action = {
-          type = "direct",
-          action_delivery = {
-            type = "projectile",
-            projectile = "scorpion-bolt",
-            starting_speed = 0.08,
-            source_effects = {
-              type = "create-entity",
-              entity_name = "explosion-woodshot-small"
-            }
-          }
-        }
-      },
-      subgroup = "ammo",
-      order = "d[rocket-launcher]-A[wood]-a[basic]",
-      inventory_move_sound = item_sounds.wood_inventory_move,
-      pick_sound = item_sounds.wood_inventory_pickup,
-      drop_sound = item_sounds.wood_inventory_move,
-      stack_size = 100,
-      weight = 40*kg
-    },
-    {
-      type = "ammo",
       name = "splinter-bolt",
       icon = "__wood-base-assets__/graphics/icons/splinter-bolt.png",
       ammo_category = "rocket",
@@ -219,13 +190,13 @@ if settings.startup["wood-military-rockets"].value then
         }
       },
       subgroup = "ammo",
-      order = "d[rocket-launcher]-A[wood]-b[explosive]",
+      order = "d[rocket-launcher]-A[wood]-a[basic]",
       inventory_move_sound = item_sounds.wood_inventory_move,
       pick_sound = item_sounds.wood_inventory_pickup,
       drop_sound = item_sounds.wood_inventory_move,
       stack_size = 100,
       weight = 40*kg
-    },
+    }
   })
 end
 

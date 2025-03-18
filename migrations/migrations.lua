@@ -20,7 +20,6 @@ for _,force in pairs(game.forces) do
 
   if settings.startup["wood-military-rockets"].value then
     local rocketry = technologies["rocketry"].researched
-    recipes["scorpion-bolt"].enabled = rocketry
     recipes["splinter-bolt"].enabled = rocketry
   end
 
