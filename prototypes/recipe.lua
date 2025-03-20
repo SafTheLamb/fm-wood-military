@@ -1,6 +1,6 @@
 local wood_cost = settings.startup["wood-military-ammo-cost"].value
 local chip_item = mods["wood-industry"] and "woodchips" or "wood"
-local coal_item = mods["early-crushing"] and settings.startup["early-crushing-coal"].value and "crushed-coal" or "coal"
+local coal_item = mods["crushing-industry"] and settings.startup["crushing-industry-coal"].value and "crushed-coal" or "coal"
 
 local lumber_item = "wood"
 local recipe_category = "crafting"
