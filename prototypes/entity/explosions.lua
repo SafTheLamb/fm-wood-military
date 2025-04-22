@@ -4,7 +4,7 @@ local small_woodshot = function()
   return
   {
     {
-      filename = "__wood-base-assets__/graphics/entity/explosion-woodshot/explosion-woodshot.png",
+      filename = "__wood-military__/graphics/entity/explosion-woodshot/explosion-woodshot.png",
       priority = "extra-high",
       width = 51,
       height = 57,

@@ -1,18 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.5.0
+Date: ????
+  Changes:
+    - Buff wooden ammo to deal 4 damage instead of 3
+    - Reduce default firerate and range nerf from -15% to -10%
+  Compatibility:
+    - Add compatibility for Voidcraft
+    - Add compatibility for Smart rounds magazines from Cupric Asteroids
+---------------------------------------------------------------------------------------------------
 Version: 2.4.3
   Compatibility:
     - Use crushed coal in splinter bolts from Crushing Industry
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.2
   Bugfixes:
     - Merge scorpion bolt and splinter bolt into a singular kind of rocket launcher ammo
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
   Bugfixes:
     - Remove unused "Carbon Military" setting
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.0
   Changes:
@@ -20,17 +26,14 @@ Version: 2.4.0
     - Remove Hard mode, with Wooden Universe it's really not necessary
     - Submachine guns, Shotguns, and Light armor now cost 10 Steel plates even without Hard mode
     - Heavy armor now costs 20 Plastic bars even without Hard mode
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.5
   Bugfixes:
     - Hide effects in factoriopedia
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.4
   Minor Features:
     - Add setting to make vanilla ammo not cost wood ammo
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.3
   Minor Features:
@@ -40,18 +43,15 @@ Version: 2.3.3
   Changes:
     - Reduce default wood ammo from 4 to 2, since this drastically affects difficulty of space defense
     - Slightly buff wood ammo (slightly increased firerate and range, and ~halved reload time)
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.2
   Bugfixes:
     - Fix wooden rockets and splinter rockets being bad (homing didn't really work)
     - Fix splinter explosion particles
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.1
   Bugfixes:
     - Fix crash when sniper rifle improved isn't installed
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.0
   Major Features:
@@ -59,43 +59,36 @@ Version: 2.3.0
   Changes:
     - Move all assets into a separate mod (wood-base-assets) to reduce large frequent download sizes
     - Add support for Basic artillery mod
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.2
   Changes:
     - Add optional compatibility with Early agriculture
   Bugfixes:
     - Fix compatibility with Distant Misfires combined with Sniper Rifle Improved
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.1
   Features:
     - Add recipe category support for new Lumber Mill from Wooden Logistics
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
   Features:
     - Add optional dependency for cupric asteroids, since wooden darts magazines require copper which is otherwise unobtainable directly on the Space Platform
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
   Features:
     - Add a setting to only start the game with wood darts (you always respawn with darts)
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
   Features:
     - Add gunshot effects
     - Adds compatibility with Distant Misfires
     - Replace kry_stdlib dependency with fdsl
-
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
   Features:
     - Update mod to Factorio 2.0.7, using Kryzeth's stdlib fork for now (its data-stage functions are currently most up-to-date)
   Changes:
     - Simplified settings to mostly be boolean checkboxes
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 1.11.2023
@@ -103,7 +96,6 @@ Date: 1.11.2023
     - Wood armor
     - Optional Hard mode that makes recipes harder
     - Wood artillery shells
-
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 12.13.2023

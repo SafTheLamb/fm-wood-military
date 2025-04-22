@@ -3,19 +3,22 @@
   "title": "Wooden Military",
   "description": "Adds wooden ammunitions for weapons! Pairs well with wood-friendly mods.",
   "author": "SafTheLamb",
-  "version": "2.4.3",
+  "version": "2.5.0",
   "factorio_version": "2.0",
   "homepage": "https://github.com/sapphiriza/wood-military",
+  "package": {
+    "ignore": ["thumbnail.afphoto", "thumbnail.pdn", "**/*.afphoto", "**/*.ase", "**/*.afphoto~lock~", "**/*.pdn"]
+  },
   "dependencies": [
     "base >= 2.0.7",
     "fdsl >= 0.1.3",
-    "wood-base-assets >= 1.0.0",
     "? early-agriculture",
-    "? cupric-asteroids",
+    "? cupric-asteroids >= 1.3.0",
     "? wood-industry >= 0.9.5",
     "? wood-logistics >= 2.2.0",
     "? distant-misfires",
     "? sniper-rifle-improved",
+    "(?) Voidcraft >= 1.4",
     "(?) basic-artillery",
     "(?) aai-industry"
   ]

@@ -55,7 +55,7 @@ data:extend({
     setting_type = "startup",
     minimum_value = 0.5,
     maximum_value = 1.0,
-    default_value = 0.85,
+    default_value = 0.9,
     order = "b[ammo-details]-e[nerf]"
   },
   {

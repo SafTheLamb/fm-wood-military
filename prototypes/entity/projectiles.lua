@@ -18,13 +18,13 @@ if settings.startup["wood-military-shotgun-ammo"].value then
           target_effects =
           {
             type = "damage",
-            damage = {amount = 3, type = "physical"}
+            damage = {amount=4, type="physical"}
           }
         }
       },
       animation =
       {
-        filename = "__wood-base-assets__/graphics/entity/wood-bullet/wood-bullet.png",
+        filename = "__wood-military__/graphics/entity/wood-bullet/wood-bullet.png",
         draw_as_glow = false,
         frame_count = 1,
         width = 3,
@@ -115,7 +115,7 @@ if settings.startup["wood-military-artillery"].value then
       hidden = true,
       map_color = {r=1, g=1, b=0},
       picture = {
-        filename = "__wood-base-assets__/graphics/entity/wood-artillery-projectile/wood-shell.png",
+        filename = "__wood-military__/graphics/entity/wood-artillery-projectile/wood-shell.png",
         draw_as_glow = true,
         width = 64,
         height = 64,

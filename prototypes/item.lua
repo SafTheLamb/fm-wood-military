@@ -10,7 +10,7 @@ if settings.startup["wood-military-smg-ammo"].value then
     {
       type = "ammo",
       name = "wood-darts-magazine",
-      icon = "__wood-base-assets__/graphics/icons/wood-darts-magazine.png",
+      icon = "__wood-military__/graphics/icons/wood-darts-magazine.png",
       ammo_category = "bullet",
       ammo_type = {
         range_modifier = wood_nerf_modifier,
@@ -34,7 +34,7 @@ if settings.startup["wood-military-smg-ammo"].value then
               },
               {
                 type = "damage",
-                damage = {amount=3, type="physical"}
+                damage = {amount=4, type="physical"}
               }
             }
           }
@@ -60,7 +60,7 @@ if settings.startup["wood-military-shotgun-ammo"].value then
     {
       type = "ammo",
       name = "wood-shotgun-shell",
-      icon = "__wood-base-assets__/graphics/icons/wood-shotgun-shell.png",
+      icon = "__wood-military__/graphics/icons/wood-shotgun-shell.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "shotgun-shell",
       ammo_type = {
@@ -116,7 +116,7 @@ if mods["sniper-rifle-improved"] and settings.startup["wood-military-sniper-ammo
     {
       type = "ammo",
       name = "wood-bolts-magazine",
-      icon = "__wood-base-assets__/graphics/icons/wood-bolts-magazine.png",
+      icon = "__wood-military__/graphics/icons/wood-bolts-magazine.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "rifle-bullet",
       ammo_type = {
@@ -171,7 +171,7 @@ if settings.startup["wood-military-rockets"].value then
     {
       type = "ammo",
       name = "splinter-bolt",
-      icon = "__wood-base-assets__/graphics/icons/splinter-bolt.png",
+      icon = "__wood-military__/graphics/icons/splinter-bolt.png",
       ammo_category = "rocket",
       ammo_type = {
         range_modifier = wood_nerf_modifier,
@@ -207,7 +207,7 @@ if settings.startup["wood-military-artillery"].value then
     {
       type = "ammo",
       name = "wood-artillery-shell",
-      icon = "__wood-base-assets__/graphics/icons/wood-artillery-shell.png",
+      icon = "__wood-military__/graphics/icons/wood-artillery-shell.png",
       icon_size = 64, icon_mipmaps = 4,
       ammo_category = "artillery-shell",
       ammo_type = {
@@ -248,7 +248,7 @@ if settings.startup["wood-military-armor"].value then
     {
       type = "armor",
       name = "wood-armor",
-      icon = "__wood-base-assets__/graphics/icons/wood-armor.png",
+      icon = "__wood-military__/graphics/icons/wood-armor.png",
       icon_size = 64, icon_mipmaps = 4,
       resistances = {
         {type="physical", decrease=2, percent=10},
@@ -266,3 +266,23 @@ if settings.startup["wood-military-armor"].value then
     }
   })
 end
+
+-------------------------------------------------------------------------- Settings proxy items
+
+local function create_proxy_item(name, icon)
+  return {
+    type = "item",
+    name = name,
+    icon = icon,
+    hidden = true,
+    stack_size = 1
+  }
+end
+data:extend({
+  create_proxy_item("wcu-proxy-smg-dart", "__wood-military__/graphics/icons/wood-darts-magazine.png"),
+  create_proxy_item("wcu-proxy-shotgun-shell", "__wood-military__/graphics/icons/wood-shotgun-shell.png"),
+  create_proxy_item("wcu-proxy-sniper-bolt", "__wood-military__/graphics/icons/wood-bolts-magazine.png"),
+  create_proxy_item("wcu-proxy-wood-rocket", "__wood-military__/graphics/icons/splinter-bolt.png"),
+  create_proxy_item("wcu-proxy-artillery-log", "__wood-military__/graphics/icons/wood-artillery-shell.png"),
+  create_proxy_item("wcu-proxy-wood-armor", "__wood-military__/graphics/icons/wood-armor.png")
+})
