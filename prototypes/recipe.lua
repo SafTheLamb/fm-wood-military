@@ -93,7 +93,7 @@ if settings.startup["wood-military-artillery"].value then
       energy_required = 3,
       ingredients = {
         {type="item", name=lumber_item, amount=2*wood_cost},
-        {type="item", name="copper-plate", amount=2},
+        {type="item", name="explosives", amount=1},
         {type="item", name="electronic-circuit", amount=1}
       },
       results = {{type="item", name="wood-artillery-shell", amount=1}}

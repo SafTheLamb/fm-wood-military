@@ -22,7 +22,7 @@ if mods["Voidcraft"] then
 		table.insert(vc_recipes, VOIDCRAFT.voidcraft_recipe({prefix="__wood-military__", subgroup="voidcraft-wood-military", advanced=true}, {"wood-artillery-shell", lumber_item, "coal"}, "vde-a", 0.1*vcc.artillery_shell, "s6x-void-artillery", {0.96, 0.8, 0.52}))
 	end
 
-	if vc_recipes ~= {} then
+	if next(vc_recipes) ~= nil then
 		data:extend(vc_recipes)
 		for _,recipe in pairs(vc_recipes) do
 			data:extend({

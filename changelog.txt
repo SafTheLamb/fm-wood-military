@@ -2,6 +2,8 @@
 Version: 2.5.2
 Date: ????
   Changes:
+    - Changed Artillery shells to require 8 Artillery logs to craft (can be disabled)
+    - Changed Artillery logs to require 1 Explosives instead of 2 Copper plates
 ---------------------------------------------------------------------------------------------------
 Version: 2.5.1
 Date: 2025-10-24

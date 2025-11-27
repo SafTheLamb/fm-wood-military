@@ -67,6 +67,12 @@ if settings.startup["wood-military-rockets"].value then
   end
 end
 
+if settings.startup["wood-military-artillery"].value then
+  if settings.startup["wood-military-modify-vanilla"].value then
+    frep.replace_ingredient("artillery-shell", "explosives", {type="item", name="wood-artillery-shell", amount=8})
+  end
+end
+
 -------------------------------------------------------------------------- Armor
 
 if settings.startup["wood-military-armor"].value then
